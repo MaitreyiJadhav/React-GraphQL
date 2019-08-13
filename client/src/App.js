@@ -4,6 +4,7 @@ import { ApolloProvider } from 'react-apollo'
 import { createHttpLink } from 'apollo-link-http'
 import AddContact from './components/AddContact'
 import Contacts from './components/Contacts'
+import Header from './components/Header'
 import './App.css'
 
 const client = new ApolloClient({
@@ -13,7 +14,9 @@ const client = new ApolloClient({
 
 const App = () => {
   return (
-    <ApolloProvider client={client}>
+ 
+<ApolloProvider client={client}>
+  <Header />
       <div className='App'>
         <AddContact/>
         <Contacts />
